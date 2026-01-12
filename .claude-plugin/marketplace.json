@@ -1,30 +1,17 @@
 {
   "name": "askop-marketplace",
   "owner": {
-    "name": "Askop",
-    "email": ""
+    "name": "Askop"
   },
   "metadata": {
     "description": "Askop's Plugin Marketplace - Coleção de plugins poderosos para Claude Code",
-    "version": "1.0.0",
-    "pluginRoot": "./plugins"
+    "version": "1.0.0"
   },
   "plugins": [
     {
       "name": "n8n-workflow-agents",
-      "source": "n8n-workflow-agents",
-      "description": "Framework de 8 subagentes especializados para criar, validar e corrigir workflows n8n com separação máxima de contexto",
-      "version": "1.0.0",
-      "author": {
-        "name": "Askop"
-      },
-      "license": "MIT",
-      "category": "automation",
-      "tags": ["n8n", "workflow", "automation", "subagents", "ai"],
-      "keywords": ["n8n", "workflow", "automation", "validation", "ai-agents", "langchain"],
-      "commands": ["/n8n-workflow", "/n8n-validate", "/n8n-fix"],
-      "repository": "https://github.com/Askop-96/askop-marketplace",
-      "homepage": "https://github.com/Askop-96/askop-marketplace/tree/main/plugins/n8n-workflow-agents"
+      "source": "./plugins/n8n-workflow-agents",
+      "description": "Framework de 8 subagentes especializados para criar, validar e corrigir workflows n8n"
     }
   ]
 }
