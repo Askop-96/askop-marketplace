@@ -1,0 +1,53 @@
+{
+  "$schema": "Contexto inicial da sessão de criação de workflow",
+  "createdAt": "",
+  "sessionId": "",
+  "userRequest": {
+    "original": "",
+    "interpreted": "",
+    "clarifications": []
+  },
+  "complexity": {
+    "level": "simple|medium|complex",
+    "estimatedNodes": 0,
+    "hasAI": false,
+    "hasDatabase": false,
+    "hasMultipleOutputs": false
+  },
+  "pattern": {
+    "identified": "",
+    "confidence": 0,
+    "alternatives": []
+  },
+  "template": {
+    "used": false,
+    "id": "",
+    "name": "",
+    "author": "",
+    "url": ""
+  },
+  "agents": {
+    "planned": [],
+    "executed": [],
+    "current": ""
+  },
+  "ralphLoop": {
+    "enabled": false,
+    "maxIterations": 20,
+    "currentIteration": 0,
+    "completionPromise": "WORKFLOW_COMPLETE"
+  },
+  "n8nConnection": {
+    "healthy": false,
+    "apiConfigured": false,
+    "baseUrl": "",
+    "lastCheck": ""
+  },
+  "outputs": {
+    "workflowId": "",
+    "workflowName": "",
+    "nodesCount": 0,
+    "validationStatus": "",
+    "createdAt": ""
+  }
+}

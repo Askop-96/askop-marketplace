@@ -1,0 +1,30 @@
+{
+  "$schema": "Checkpoint de estado para continuação entre agentes ou iterações Ralph Loop",
+  "agentId": "",
+  "timestamp": "",
+  "phase": "planning|discovery|configuration|building|validation|fixing",
+  "currentStep": 0,
+  "totalSteps": 0,
+  "workflowId": "",
+  "workflowName": "",
+  "nodesCreated": [],
+  "nodesPending": [],
+  "nodesConfigured": [],
+  "connectionsCreated": [],
+  "connectionsPending": [],
+  "lastValidation": {
+    "valid": false,
+    "errors": [],
+    "warnings": [],
+    "fixesApplied": 0
+  },
+  "iterationCount": 0,
+  "maxIterations": 20,
+  "completionPromise": "",
+  "contextUsage": {
+    "estimatedTokens": 0,
+    "threshold": 50000,
+    "shouldContinue": true
+  },
+  "notes": []
+}

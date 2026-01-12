@@ -1,0 +1,47 @@
+# Session files
+.n8n-session/
+**/.n8n-session/
+
+# Local settings
+*.local.md
+.local/
+
+# OS generated
+.DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db
+
+# IDE/Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Temp
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Node
+node_modules/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Backup
+*.bak
+*.backup
+
+# Cache
+.cache/
+__pycache__/

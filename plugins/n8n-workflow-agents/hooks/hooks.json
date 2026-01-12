@@ -1,0 +1,68 @@
+{
+  "PreToolUse": [
+    {
+      "matcher": "mcp__MCP_DOCKER__n8n_create_workflow|mcp__MCP_DOCKER__n8n_update_partial_workflow|mcp__MCP_DOCKER__n8n_update_full_workflow",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "powershell -Command \"Write-Host '⚠️ VALIDAÇÃO: Workflow será modificado. Verificando pré-requisitos...' -ForegroundColor Yellow\"",
+          "timeout": 5
+        }
+      ]
+    },
+    {
+      "matcher": "mcp__MCP_DOCKER__n8n_delete_workflow",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "powershell -Command \"Write-Host '🚨 ATENÇÃO: Workflow será DELETADO. Esta ação é irreversível!' -ForegroundColor Red\"",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "PostToolUse": [
+    {
+      "matcher": "mcp__MCP_DOCKER__n8n_create_workflow",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "powershell -Command \"if (-not (Test-Path '.n8n-session')) { New-Item -ItemType Directory -Path '.n8n-session' -Force | Out-Null }; Write-Host '✅ Workflow criado' -ForegroundColor Green\"",
+          "timeout": 10
+        }
+      ]
+    },
+    {
+      "matcher": "mcp__MCP_DOCKER__validate_workflow|mcp__MCP_DOCKER__n8n_validate_workflow",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "powershell -Command \"Write-Host '📋 Validação executada' -ForegroundColor Cyan\"",
+          "timeout": 5
+        }
+      ]
+    },
+    {
+      "matcher": "mcp__MCP_DOCKER__n8n_autofix_workflow",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "powershell -Command \"Write-Host '🔧 Autofix aplicado' -ForegroundColor Magenta\"",
+          "timeout": 5
+        }
+      ]
+    }
+  ],
+  "SubagentStop": [
+    {
+      "matcher": "n8n-.*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "powershell -Command \"$timestamp = Get-Date -Format 'yyyy-MM-dd HH:mm:ss'; if (-not (Test-Path '.n8n-session')) { New-Item -ItemType Directory -Path '.n8n-session' -Force | Out-Null }; Add-Content -Path '.n8n-session/execution-log.md' -Value \\\"[$timestamp] Agente finalizado\\\"\"",
+          "timeout": 5
+        }
+      ]
+    }
+  ]
+}

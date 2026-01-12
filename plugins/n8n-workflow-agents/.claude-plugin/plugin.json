@@ -1,0 +1,21 @@
+{
+  "name": "n8n-workflow-agents",
+  "version": "1.0.0",
+  "description": "Framework de subagentes especializados para criação, validação e correção de workflows n8n com separação máxima de contexto",
+  "author": {
+    "name": "n8n Workflow Automation"
+  },
+  "license": "MIT",
+  "keywords": [
+    "n8n",
+    "workflow",
+    "automation",
+    "subagents",
+    "validation",
+    "ai-agents"
+  ],
+  "commands": "./commands",
+  "agents": "./agents",
+  "hooks": "./hooks/hooks.json",
+  "skills": "./skills"
+}
